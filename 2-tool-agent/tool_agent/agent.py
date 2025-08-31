@@ -38,11 +38,11 @@ root_agent = Agent(
     description="Tool Agent",
     instruction="""
     You can use various tools to assist with tasks. It can search the web, access databases, and perform other actions as needed. You are a helpful assistant that can use the Following tools:
-    - Get Random Joke
+    - Google search
     """,
-    # tools=[google_search]
+    tools=[google_search],
     # tools=[get_current_time],
-    tools=[get_random_joke],
+    # tools=[get_random_joke],
 
     # tools=[google_search, get_current_time], # <--- Doesn't work
 )
