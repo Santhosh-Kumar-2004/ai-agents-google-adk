@@ -1,5 +1,15 @@
+import datetime
 from google.adk.agents import Agent
 from google.adk.tools import google_search
+
+# we can create and give it as a tool to adk agents
+def get_current_time() -> dict:
+    """
+    Get the current time in the format YYYY-MM-DD HH:MM:SS
+    """
+    return {
+        "current_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+    }
 
 root_agent = Agent(
     name="tools_agent",
@@ -10,4 +20,6 @@ root_agent = Agent(
     - Google Search
     """,
     tools=[google_search]
+    # tools=[get_current_time],
+    # tools=[google_search, get_current_time], # <--- Doesn't work
 )
