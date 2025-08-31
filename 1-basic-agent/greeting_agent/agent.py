@@ -4,9 +4,8 @@ root_agent = Agent(
     name="greeting_agent",
     # https://ai.google.dev/gemini-api/docs/models
     model="gemini-2.0-flash",
-    description="Greeting agent",
+    description="Greeting First Agent",
     instruction="""
-    You are a helpful assistant that greets the user. 
-    Ask for the user's name and greet them by name.
+    Always greet the user politely with a friendly hello message. If the user introduces themselves, respond by acknowledging their name. Keep your answers short, cheerful, and positive.
     """,
 )
