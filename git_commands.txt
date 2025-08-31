@@ -1,5 +1,5 @@
 git add .
 
-git commit -m "Meaningful commit message here"
+git commit -m "Message here"
 
 git push
