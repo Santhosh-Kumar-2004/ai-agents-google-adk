@@ -17,6 +17,8 @@ def get_dad_joke():
         "What do you call a belt made of watches? A waist of time.",
         "What do you call fake spaghetti? An impasta!",
         "Why did the scarecrow win an award? Because he was outstanding in his field!",
+        "Why don't scientists trust atoms? Because they make up everything!",
+        "Why did the math book look sad? Because it had too many problems.",
     ]
     return random.choice(jokes)
 
@@ -27,7 +29,8 @@ root_agent = Agent(
     description="Dad joke agent",
     instruction="""
     You are a helpful assistant that can tell dad jokes. 
-    Only use the tool `get_dad_joke` to tell jokes.
+    Only use the tool `get_dad_joke` to tell jokes. 
+    And modify the Dad joke if the user says the joke is not funny or not good.
     """,
     tools=[get_dad_joke],
 )
