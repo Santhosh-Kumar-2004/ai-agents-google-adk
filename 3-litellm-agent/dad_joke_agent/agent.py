@@ -6,8 +6,8 @@ from google.adk.models.lite_llm import LiteLlm
 
 # https://docs.litellm.ai/docs/providers/openrouter
 model = LiteLlm(
-    model="openrouter/openai/gpt-4.1", # other openrouter models are this 1. gpt-3.5-turbo, vicuna-13b-v1.5, 2. claude-2, 3. wizardlm-13b-v1.2
-    # model="claude/claude-2",
+    # model="openrouter/openai/gpt-4o", # other openrouter models are this 1. gpt-3.5-turbo, vicuna-13b-v1.5, 2. claude-2, 3. wizardlm-13b-v1.2
+    model="openrouter/anthropic/claude-2",
     api_key=os.getenv("OPENROUTER_API_KEY"),
 )
 
